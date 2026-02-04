@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="250.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pomodoro.com.TimerController">
+   <top>
+      <Pane fx:id="topPane" prefHeight="37.0" prefWidth="250.0" style="-fx-background-color: FFA4A4; -fx-background-radius: 15 15 0 0; -fx-border-color: transparent;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="22.0" layoutY="4.0" text="Pomodoro &lt;3" textFill="#a44646">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="174.0" layoutY="5.0">
+               <image>
+                  <Image url="@../../img/focus/min.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="210.0" layoutY="5.0">
+               <image>
+                  <Image url="@../../img/focus/exit.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="minButton" layoutX="174.0" layoutY="4.0" mnemonicParsing="false" onAction="#minimize" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="closeButton" layoutX="210.0" layoutY="4.0" mnemonicParsing="false" onAction="#close" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: transparent;" />
+         </children>
+      </Pane>
+   </top>
+   <left>
+      <Pane prefHeight="245.0" prefWidth="8.0" style="-fx-background-color: FFA4A4; -fx-border-color: transparent;" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="245.0" prefWidth="8.0" style="-fx-background-color: FFA4A4; -fx-border-color: transparent;" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Pane prefHeight="18.0" prefWidth="250.0" style="-fx-background-color: FFA4A4; -fx-background-radius: 0 0 15 15; -fx-border-color: transparent;" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFBDBD; -fx-border-color: A44646;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="timerLabel" layoutX="75.0" layoutY="124.0" prefHeight="32.0" prefWidth="84.0" textFill="#a44646">
+               <font>
+                  <Font name="Eras Bold ITC" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="pauseImage" fitHeight="48.0" fitWidth="50.0" layoutX="31.0" layoutY="166.0">
+               <image>
+                  <Image url="@../../img/focus/pause.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="playImage" fitHeight="48.0" fitWidth="50.0" layoutX="92.0" layoutY="166.0">
+               <image>
+                  <Image url="@../../img/focus/play.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="restartImage" fitHeight="48.0" fitWidth="50.0" layoutX="153.0" layoutY="166.0">
+               <image>
+                  <Image url="@../../img/focus/restart.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="pauseButton" layoutX="30.0" layoutY="165.0" mnemonicParsing="false" onAction="#pauseTimer" prefHeight="48.0" prefWidth="52.0" style="-fx-background-color: transparent;" textFill="TRANSPARENT" />
+            <Button fx:id="playButton" layoutX="91.0" layoutY="166.0" mnemonicParsing="false" onAction="#playTimer" prefHeight="48.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="restartButton" layoutX="152.0" layoutY="166.0" mnemonicParsing="false" onAction="#restartTimer" prefHeight="48.0" prefWidth="52.0" style="-fx-background-color: transparent;" />
+            <ImageView fitHeight="124.0" fitWidth="124.0" layoutX="55.0" layoutY="7.0">
+               <image>
+                  <Image url="@../../img/focus/relogioFocus.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
