@@ -63,7 +63,6 @@ public class IndexController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
 
-        // DEFINA A TRANSPARÊNCIA AQUI
         scene.setFill(Color.TRANSPARENT);
 
         stage.setScene(scene);
